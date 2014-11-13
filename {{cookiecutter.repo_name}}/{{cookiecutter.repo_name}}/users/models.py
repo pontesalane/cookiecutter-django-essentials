@@ -11,5 +11,5 @@ from django.utils.translation import ugettext_lazy as _
 # Subclass AbstractUser
 class User(AbstractUser):
 
-    def __unicode__(self):
+    def __str__(self):
         return self.username
