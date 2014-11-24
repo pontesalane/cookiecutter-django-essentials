@@ -17,8 +17,6 @@ Features
 ---------
 
 * For Django 1.7
-* Twitter Bootstrap_ 3
-* AngularJS_
 * Settings management via django-configurations_
 * Registration via django-allauth_
 * User avatars via django-avatar_
@@ -28,8 +26,6 @@ Features
 * Grunt build for compass and livereload
 * Basic e-mail configurations for send emails via SendGrid_
 
-.. _Bootstrap: https://github.com/twbs/bootstrap
-.. _AngularJS: https://github.com/angular/angular.js
 .. _django-configurations: https://github.com/jezdez/django-configurations
 .. _django-allauth: https://github.com/pennersr/django-allauth
 .. _django-avatar: https://github.com/jezdez/django-avatar/

@@ -22,7 +22,7 @@ module.exports = function (grunt) {
       images: this.app + '/static/images',
       js: this.app + '/static/js',
       manageScript: this.app + '/manage.py'
-    }
+    };
   };
 
   grunt.initConfig({
@@ -81,7 +81,7 @@ module.exports = function (grunt) {
         bg: true
       },
       runDjango: {
-        cmd: 'python <%= paths.manageScript %> runserver'
+        cmd: 'python <%= paths.manageScript %> runserver 0.0.0.0:8080'
       }
     }
   });
