@@ -7,5 +7,8 @@
     "year": "2014",
     "domain_name": "example.com",
     "version": "0.1.0",
-    "now": "2014/06/15"
+    "now": "2014/06/15",
+    "database_name": "database",
+    "database_user": "dbuser",
+    "database_password": "password"
 }

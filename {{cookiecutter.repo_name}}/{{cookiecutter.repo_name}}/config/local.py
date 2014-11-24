@@ -42,3 +42,14 @@ class Local(Common):
     # end django-debug-toolbar
 
     # Your local stuff: Below this line define 3rd party libary settings
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': '{{cookiecutter.database_name}}',
+            'USER': '{{cookiecutter.database_user}}',
+            'PASSWORD': '{{cookiecutter.database_password}}',
+            'HOST': '127.0.0.1',
+            'PORT': '5432',
+        }
+    }
