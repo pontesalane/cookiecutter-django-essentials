@@ -50,6 +50,8 @@ module.exports = function (grunt) {
           livereload: true,
         },
       },
+      files: ['<%= paths.js %>/src/**/*.js'],
+      tasks: ['uglify:dev'],
     },
 
     // see: https://github.com/gruntjs/grunt-contrib-compass
@@ -61,7 +63,11 @@ module.exports = function (grunt) {
           imagesDir: '<%= paths.images %>',
           relativeAssets: false,
           assetCacheBuster: false,
-          raw: 'Sass::Script::Number.precision = 10\n'
+          raw: 'Sass::Script::Number.precision = 10\n',
+          require: [
+            'bourbon',
+            'breakpoint',
+          ]
       },
       dist: {
         options: {
@@ -71,6 +77,34 @@ module.exports = function (grunt) {
       server: {
         options: {
           // debugInfo: true
+        }
+      }
+    },
+
+    // see: https://github.com/gruntjs/grunt-contrib-uglify
+    uglify: {
+      dist: {
+        options: {
+          banner: '/* Minified for production. */'
+        },
+        files: {
+          '<%= paths.js %>/project.min.js': ['<%= paths.js %>/src/*.js']
+        }
+      },
+      dev: {
+        options: {
+          sourceMap: true,
+          sourceMapName: '<%= paths.js %>/sourcemap.map',
+          mangle: false,
+          beautify: {
+            beautify: true,
+            bracketize: true,
+            indent_level: 2,
+            width: 80,
+          },
+        },
+        files: {
+          '<%= paths.js %>/project.min.js': ['<%= paths.js %>/src/*.js']
         }
       }
     },
@@ -88,11 +122,13 @@ module.exports = function (grunt) {
 
   grunt.registerTask('serve', [
     'bgShell:runDjango',
-    'watch'
+    'uglify:dev',
+    'watch',
   ]);
 
   grunt.registerTask('build', [
-    'compass:dist'
+    'compass:dist',
+    'uglify:dist'
   ]);
 
   grunt.registerTask('default', [
