@@ -1,8 +1,8 @@
 cookiecutter-django
 =======================
 
-.. image:: https://requires.io/github/pydanny/cookiecutter-django/requirements.png?branch=master
-     :target: https://requires.io/github/pydanny/cookiecutter-django/requirements/?branch=master
+.. image:: https://requires.io/github/wldcordeiro/cookiecutter-django/requirements.svg?branch=master
+     :target: https://requires.io/github/wldcordeiro/cookiecutter-django/requirements/?branch=master
      :alt: Requirements Status
 
 .. image:: https://travis-ci.org/pydanny/cookiecutter-django.svg?branch=master
@@ -110,7 +110,7 @@ First make sure to create and activate a virtualenv_, then open a terminal at th
 Then, create a PostgreSQL database and add the database configuration using the  ``dj-database-url`` app pattern: ``postgres://db_owner:password@dbserver_ip:port/db_name`` either:
 
 * in the ``config.common.py`` setting file,
-* or in the env variable ``DATABASE_URL`` 
+* or in the env variable ``DATABASE_URL``
 
 
 
