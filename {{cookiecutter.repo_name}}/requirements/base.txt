@@ -9,7 +9,6 @@ dj-database-url==0.3.0
 
 # Forms
 django-braces==1.4.0
-django-crispy-forms==1.4.0
 django-floppyforms==1.2.0
 
 # Models

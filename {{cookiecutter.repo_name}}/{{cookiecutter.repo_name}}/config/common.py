@@ -37,7 +37,6 @@ class Common(Configuration):
         'django.contrib.admin',
     )
     THIRD_PARTY_APPS = (
-        'crispy_forms',  # Form layouts
         'avatar',  # for user avatars
         'allauth',  # registration
         'allauth.account',  # registration
@@ -171,8 +170,6 @@ class Common(Configuration):
         'django.template.loaders.app_directories.Loader',
     )
 
-    # See: http://django-crispy-forms.readthedocs.org/en/latest/install.html#template-packs
-    CRISPY_TEMPLATE_PACK = 'bootstrap3'
     # END TEMPLATE CONFIGURATION
 
     # STATIC FILE CONFIGURATION
