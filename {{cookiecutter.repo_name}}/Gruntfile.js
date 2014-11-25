@@ -17,10 +17,12 @@ module.exports = function (grunt) {
       app: this.app,
       templates: this.app + '/templates',
       css: this.app + '/static/css',
-      sass: this.app + '/static/sass',
+      sass: this.app + '/src/sass',
       fonts: this.app + '/static/fonts',
-      images: this.app + '/static/images',
-      js: this.app + '/static/js',
+      images: this.app + '/src/img',
+      images_otim: this.app + '/static/img',
+      js: this.app + '/src/js',
+      js_min: this.app + '/static/js',
       manageScript: this.app + '/manage.py'
     };
   };
@@ -51,7 +53,7 @@ module.exports = function (grunt) {
         },
       },
       files: ['<%= paths.js %>/src/**/*.js'],
-      tasks: ['uglify:dev'],
+      tasks: ['newer:uglify:dev'],
     },
 
     // see: https://github.com/gruntjs/grunt-contrib-compass
@@ -60,7 +62,7 @@ module.exports = function (grunt) {
           sassDir: '<%= paths.sass %>',
           cssDir: '<%= paths.css %>',
           fontsDir: '<%= paths.fonts %>',
-          imagesDir: '<%= paths.images %>',
+          imagesDir: '<%= paths.images_otim %>',
           relativeAssets: false,
           assetCacheBuster: false,
           raw: 'Sass::Script::Number.precision = 10\n',
@@ -88,7 +90,7 @@ module.exports = function (grunt) {
           banner: '/* Minified for production. */'
         },
         files: {
-          '<%= paths.js %>/project.min.js': ['<%= paths.js %>/src/*.js']
+          '<%= paths.js_min %>/project.min.js': ['<%= paths.js %>/**/*.js']
         }
       },
       dev: {
@@ -104,8 +106,19 @@ module.exports = function (grunt) {
           },
         },
         files: {
-          '<%= paths.js %>/project.min.js': ['<%= paths.js %>/src/*.js']
+          '<%= paths.js_min %>/project.min.js': ['<%= paths.js %>/**/*.js']
         }
+      }
+    },
+
+    imagemin: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= paths.images %>',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: '<%= paths.app %>/static/img/'
+        }]
       }
     },
 
@@ -122,13 +135,15 @@ module.exports = function (grunt) {
 
   grunt.registerTask('serve', [
     'bgShell:runDjango',
-    'uglify:dev',
+    'newer:uglify:dev',
+    'newer:imagemin:dist',
     'watch',
   ]);
 
   grunt.registerTask('build', [
     'compass:dist',
-    'uglify:dist'
+    'newer:uglify:dist',
+    'newer:imagemin:dist'
   ]);
 
   grunt.registerTask('default', [
