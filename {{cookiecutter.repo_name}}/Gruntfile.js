@@ -10,6 +10,8 @@ module.exports = function (grunt) {
   // see: https://npmjs.org/package/time-grunt
   require('time-grunt')(grunt);
 
+  var mozjpeg = require('imagemin-mozjpeg');
+
   var pathsConfig = function (appName) {
     this.app = appName || appConfig.name;
 
@@ -113,6 +115,10 @@ module.exports = function (grunt) {
 
     imagemin: {
       dist: {
+        options: {
+          optimizationLevel: 5,
+          use: [mozjpeg()]
+        },
         files: [{
           expand: true,
           cwd: '<%= paths.images %>',
