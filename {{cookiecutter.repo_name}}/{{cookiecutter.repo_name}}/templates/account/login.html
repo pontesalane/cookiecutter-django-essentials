@@ -3,7 +3,6 @@
 {% load i18n %}
 {% load account %}
 {% load url from future %}
-{% load crispy_forms_tags %}
 
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
@@ -12,7 +11,7 @@
 
 {% if socialaccount.providers  %}
   <p>{% blocktrans with site.name as site_name %}Please sign in with one
-  of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a> 
+  of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
   for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
     <ul>
       {% include "socialaccount/snippets/provider_list.html" with process="login" %}
@@ -23,7 +22,7 @@
 
 <form method="POST" action="{% url 'account_login' %}">
   {% csrf_token %}
-  {{ form|crispy }}
+  {{ form }}
   {% if redirect_field_value %}
     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
