@@ -19,11 +19,11 @@ module.exports = function (grunt) {
       app: this.app,
       templates: this.app + '/templates',
       css: this.app + '/static/css',
-      sass: this + '/static_src/sass',
+      sass: this + '/../static_src/sass',
       fonts: this.app + '/static/fonts',
-      images: this + '/static_src/img',
+      images: this + '/../static_src/img',
       images_otim: this.app + '/static/img',
-      js: this + '/static_src/js',
+      js: this + '/../static_src/js',
       js_min: this.app + '/static/js',
       manageScript: this.app + '/manage.py'
     };
