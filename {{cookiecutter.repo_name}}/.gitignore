@@ -11,6 +11,7 @@ pip-log.txt
 .coverage
 .tox
 nosetests.xml
+htmlcov/
 
 # Translations
 *.mo
@@ -29,4 +30,4 @@ nosetests.xml
 node_modules/
 
 # Campass
-.sass-cache
+.sass-cache/

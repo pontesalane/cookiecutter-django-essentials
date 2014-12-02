@@ -1,0 +1,18 @@
+general:
+  artifacts:
+    - "htmlcov"
+dependencies:
+  override:
+    - pip install -r requirements/test.txt
+
+machine:
+  environment:
+    DJANGO_SETTINGS_MODULE: config
+    DJANGO_CONFIGURATION: Testing
+  python:
+    version: 3.4.1
+
+test:
+  override:
+    - "coverage run --source='.' {{cookiecutter.repo_name}}/manage.py test"
+    - coverage html
