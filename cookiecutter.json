@@ -1,6 +1,7 @@
 {
     "project_name": "project_name is the title of the project.",
     "repo_name":"repo_name is used for describing the directory structure.",
+    "project_camel_name": "CamelCase version of your project name to use for class names.",
     "author_name": "Your Name",
     "email": "Your email",
     "description": "A short description of the project.",
