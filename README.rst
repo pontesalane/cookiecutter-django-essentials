@@ -23,7 +23,7 @@ Features
 * Procfile_ for deploying to Heroku
 * Heroku optimized requirements
 * Basic caching setup
-* Grunt build for compass and livereload
+* Grunt build for compass, uglify, imagemin and livereload
 * Basic e-mail configurations for send emails via SendGrid_
 
 .. _django-configurations: https://github.com/jezdez/django-configurations
