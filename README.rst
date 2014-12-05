@@ -1,11 +1,11 @@
 cookiecutter-django
 =======================
 
-.. image:: https://requires.io/github/wldcordeiro/cookiecutter-django/requirements.svg?branch=master
+.. image:: https://requires.io/github/wldcordeiro/cookiecutter-django-essentials/requirements.svg?branch=master
      :target: https://requires.io/github/wldcordeiro/cookiecutter-django/requirements/?branch=master
      :alt: Requirements Status
 
-.. image:: https://travis-ci.org/wldcordeiro/cookiecutter-django.svg?branch=master
+.. image:: https://travis-ci.org/wldcordeiro/cookiecutter-django-essentials.svg?branch=master
      :target: https://travis-ci.org/wldcordeiro/cookiecutter-django.svg?branch=master
      :alt: Build Status
 
