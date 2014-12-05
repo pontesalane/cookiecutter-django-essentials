@@ -5,8 +5,8 @@ cookiecutter-django
      :target: https://requires.io/github/wldcordeiro/cookiecutter-django/requirements/?branch=master
      :alt: Requirements Status
 
-.. image:: https://travis-ci.org/pydanny/cookiecutter-django.svg?branch=master
-     :target: https://travis-ci.org/pydanny/cookiecutter-django.svg?branch=master
+.. image:: https://travis-ci.org/wldcordeiro/cookiecutter-django.svg?branch=master
+     :target: https://travis-ci.org/wldcordeiro/cookiecutter-django.svg?branch=master
      :alt: Build Status
 
 A cookiecutter_ template for Django.
@@ -53,12 +53,12 @@ First, get cookiecutter. Trust me, it's awesome::
 
 Now run it against this repo::
 
-    $ cookiecutter https://github.com/pydanny/cookiecutter-django.git
+    $ cookiecutter https://github.com/wldcordeiro/cookiecutter-django.git
 
 You'll be prompted for some questions, answer them, then it will create a Django project for you.
 
 
-**Warning**: After this point, change 'Daniel Greenfeld', 'pydanny', etc to your own information.
+**Warning**: After this point, change 'Wellington Cordeiro', 'wldcordeiro', etc to your own information.
 
 It prompts you for questions. Answer them::
 
@@ -70,8 +70,8 @@ It prompts you for questions. Answer them::
     Resolving deltas: 100% (283/283), done.
     project_name (default is "project_name")? Reddit Clone
     repo_name (default is "repo_name")? redditclone
-    author_name (default is "Your Name")? Daniel Greenfeld
-    email (default is "Your email")? pydanny@gmail.com
+    author_name (default is "Your Name")? Wellington Cordeiro
+    email (default is "Your email")? wellington@wellingtoncordeiro.com
     description (default is "A short description of the project.")? A reddit clone.
     year (default is "Current year")? 2014
     domain_name (default is "Domain name")?

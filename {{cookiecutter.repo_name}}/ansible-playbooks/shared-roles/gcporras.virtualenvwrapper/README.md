@@ -1,3 +1,4 @@
+{% raw %}
 ansible-role-virtualenvwrapper
 ========
 
@@ -52,3 +53,4 @@ MIT
 ## Author Information
 
 This role was created in 2014 by Gerardo Cepeda Porras.
+{% endraw %}
