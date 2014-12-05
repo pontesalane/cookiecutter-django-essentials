@@ -14,13 +14,13 @@ class UserForm(forms.ModelForm):
         fields = ("first_name", "last_name")
 
 
-class ZionsUserChangeForm(UserChangeForm):
+class {{cookiecutter.project_camel_name}}UserChangeForm(UserChangeForm):
 
     class Meta(UserChangeForm.Meta):
         model = User
 
 
-class ZionsUserCreationForm(UserCreationForm):
+class {{cookiecutter.project_camel_name}}UserCreationForm(UserCreationForm):
 
     class Meta(UserCreationForm.Meta):
         model = User
