@@ -1,7 +1,0 @@
----
-- hosts: all
-  sudo: yes
-  vars_files:
-    - "ansible-playbooks/playbooks/python-vagrant/vars/credentials.yml"
-  roles:
-    - "ansible-playbooks/playbooks/python-vagrant/roles/python-vagrant"

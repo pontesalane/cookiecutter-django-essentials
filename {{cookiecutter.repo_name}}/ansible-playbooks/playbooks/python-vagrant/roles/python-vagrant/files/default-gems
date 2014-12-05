@@ -1,8 +1,0 @@
-# Gems that are likely to be used
-bundler
-git-up
-compass
-
-# Gems that may not be used on all projects
-breakpoint
-bourbon

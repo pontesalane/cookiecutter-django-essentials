@@ -1,9 +1,0 @@
----
-dependencies:
-  - { role: ANXS.build-essential }  # Required for compiling C software from source
-  - { role: ANXS.git }
-  - { role: Stouts.python }
-  - { role: ANXS.postgresql }
-  - { role: zzet.rbenv }
-  - { role: ANXS.nodejs }
-  - { role: gcporras.virtualenvwrapper}

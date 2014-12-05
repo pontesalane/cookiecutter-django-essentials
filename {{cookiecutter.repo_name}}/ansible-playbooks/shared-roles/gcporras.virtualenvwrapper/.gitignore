@@ -1,8 +1,0 @@
-# Created by .gitignore support plugin (hsz.mobi)
-.DS_Store
-*/**.DS_Store
-._*
-.*.sw*
-*~
-.idea/
-atlassian-ide-plugin.xml
