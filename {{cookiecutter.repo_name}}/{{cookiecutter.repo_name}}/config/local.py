@@ -24,11 +24,13 @@ class Local(Common):
     # Mail settings
     EMAIL_HOST = 'localhost'
     EMAIL_PORT = 1025
-    EMAIL_BACKEND = values.Value('django.core.mail.backends.console.EmailBackend')
+    EMAIL_BACKEND = values.Value(
+        'django.core.mail.backends.console.EmailBackend')
     # End mail settings
 
     # django-debug-toolbar
-    MIDDLEWARE_CLASSES = Common.MIDDLEWARE_CLASSES + ('debug_toolbar.middleware.DebugToolbarMiddleware',)
+    MIDDLEWARE_CLASSES = Common.MIDDLEWARE_CLASSES + \
+        ('debug_toolbar.middleware.DebugToolbarMiddleware',)
     INSTALLED_APPS += ('debug_toolbar',)
 
     INTERNAL_IPS = ('127.0.0.1', '10.0.2.2')
@@ -46,10 +48,16 @@ class Local(Common):
     # DATABASE CONFIGURATION
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
     DATABASES = values.DatabaseURLValue(
-        'postgres://{{cookiecutter.database_user}}:{{cookiecutter.database_password}}@localhost:5432/{{cookiecutter.database_name}}'
-        )
+        ('postgres://{{cookiecutter.database_user}}:'
+         '{{cookiecutter.database_password}}@'
+         'localhost:5432/{{cookiecutter.database_name}}'
+         )
+    )
     # TEST DATABASE
     TEST = values.DatabaseURLValue(
-        'postgres://{{cookiecutter.database_user}}:{{cookiecutter.database_password}}@localhost:5432/test_{{cookiecutter.database_name}}'
-        )
+        ('postgres://{{cookiecutter.database_user}}:'
+         '{{cookiecutter.database_password}}@'
+         'localhost:5432/test_{{cookiecutter.database_name}}'
+         )
+    )
     # END DATABASE CONFIGURATION
