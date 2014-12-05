@@ -1,5 +1,5 @@
-cookiecutter-django
-=======================
+cookiecutter-django-essentials
+==============================
 
 .. image:: https://requires.io/github/wldcordeiro/cookiecutter-django-essentials/requirements.svg?branch=master
      :target: https://requires.io/github/wldcordeiro/cookiecutter-django-essentials/requirements/?branch=master
