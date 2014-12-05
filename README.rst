@@ -5,9 +5,9 @@ cookiecutter-django-essentials
      :target: https://requires.io/github/wldcordeiro/cookiecutter-django-essentials/requirements/?branch=master
      :alt: Requirements Status
 
-.. image:: https://travis-ci.org/wldcordeiro/cookiecutter-django-essentials.svg?branch=master
-     :target: https://travis-ci.org/wldcordeiro/cookiecutter-django-essentials.svg?branch=master
-     :alt: Build Status
+.. image:: https://circleci.com/gh/wldcordeiro/cookiecutter-django-essentials.svg?style=svg
+    :target: https://circleci.com/gh/wldcordeiro/cookiecutter-django-essentials
+    :alt: CircleCI Build Status
 
 A cookiecutter_ template for Django.
 
