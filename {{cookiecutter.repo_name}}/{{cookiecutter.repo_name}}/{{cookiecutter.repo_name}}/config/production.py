@@ -35,7 +35,7 @@ class Production(Common):
     # END SECRET KEY
 
     # django-secure
-    INSTALLED_APPS += ("djangosecure", )
+    INSTALLED_APPS += ('djangosecure', )
 
     # set this to 60 seconds and then to 518400 when you can prove it works
     SECURE_HSTS_SECONDS = 60
@@ -51,10 +51,10 @@ class Production(Common):
     # SITE CONFIGURATION
     # Hosts/domain names that are valid for this site
     # See https://docs.djangoproject.com/en/1.6/ref/settings/#allowed-hosts
-    ALLOWED_HOSTS = ["*"]
+    ALLOWED_HOSTS = ['*']
     # END SITE CONFIGURATION
 
-    INSTALLED_APPS += ("gunicorn", )
+    INSTALLED_APPS += ('gunicorn', )
 
     # STORAGE CONFIGURATION
     # See: http://django-storages.readthedocs.org/en/latest/index.html
@@ -74,26 +74,26 @@ class Production(Common):
 
     # see: https://github.com/antonagestam/collectfast
     AWS_PRELOAD_METADATA = True
-    INSTALLED_APPS += ("collectfast", )
+    INSTALLED_APPS += ('collectfast', )
 
     # AWS cache settings, don't change unless you know what you're doing:
-    AWS_EXPIREY = 60 * 60 * 24 * 7
+    AWS_EXPIRY = 60 * 60 * 24 * 7
     AWS_HEADERS = {
-        'Cache-Control': 'max-age=%d, s-maxage=%d, must-revalidate' % (
-            AWS_EXPIREY, AWS_EXPIREY)
+        'Cache-Control': 'max-age={0}, s-maxage={1}, must-revalidate'.format(
+            AWS_EXPIRY, AWS_EXPIRY)
     }
 
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#static-url
-    STATIC_URL = 'https://s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
+    STATIC_URL = 'https://s3.amazonaws.com/{0}/'.format(AWS_STORAGE_BUCKET_NAME)
     # END STORAGE CONFIGURATION
 
     # EMAIL
     DEFAULT_FROM_EMAIL = values.Value('{{cookiecutter.project_name}} <noreply@{{cookiecutter.domain_name}}>')
     EMAIL_HOST = values.Value('smtp.sendgrid.com')
-    EMAIL_HOST_PASSWORD = values.SecretValue(environ_prefix="", environ_name="SENDGRID_PASSWORD")
-    EMAIL_HOST_USER = values.SecretValue(environ_prefix="", environ_name="SENDGRID_USERNAME")
-    EMAIL_PORT = values.IntegerValue(587, environ_prefix="", environ_name="EMAIL_PORT")
-    EMAIL_SUBJECT_PREFIX = values.Value('[{{cookiecutter.project_name}}] ', environ_name="EMAIL_SUBJECT_PREFIX")
+    EMAIL_HOST_PASSWORD = values.SecretValue(environ_prefix='', environ_name='SENDGRID_PASSWORD')
+    EMAIL_HOST_USER = values.SecretValue(environ_prefix='', environ_name='SENDGRID_USERNAME')
+    EMAIL_PORT = values.IntegerValue(587, environ_prefix='', environ_name='EMAIL_PORT')
+    EMAIL_SUBJECT_PREFIX = values.Value('[{{cookiecutter.project_name}}] ', environ_name='EMAIL_SUBJECT_PREFIX')
     EMAIL_USE_TLS = True
     SERVER_EMAIL = EMAIL_HOST_USER
     # END EMAIL
@@ -116,7 +116,7 @@ class Production(Common):
         from memcacheify import memcacheify
         CACHES = memcacheify()
     except ImportError:
-        CACHES = values.CacheURLValue(default="memcached://127.0.0.1:11211")
+        CACHES = values.CacheURLValue(default='memcached://127.0.0.1:11211')
     # END CACHING
 
     # Your production stuff: Below this line define 3rd party libary settings
