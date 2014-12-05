@@ -1,0 +1,22 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  # Base box
+  config.vm.box = "ubuntu/trusty64"
+
+  # Port-forwarding map
+  config.vm.network "forwarded_port", guest: 8080, host: 8080
+
+  # If true, then any SSH connections made will enable agent forwarding.
+  # Default value: false
+  config.ssh.forward_agent = true
+
+  # Provision
+  config.vm.provision "ansible" do |ansible|
+    ansible.playbook = "setup.yml"
+  end
+end
