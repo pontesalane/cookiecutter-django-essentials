@@ -32,7 +32,7 @@ django-autoslug==1.7.2
 # Useful things
 django-avatar==2.0
 django-reversion==1.8.5
-django-markdown==0.8.0
+django-markdown==0.8.1
 
 # Time zones support
 pytz==2014.10
