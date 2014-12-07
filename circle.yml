@@ -8,4 +8,4 @@ dependencies:
 
 test:
   override:
-    - pep8 --max-line-length=100 --exclude='migrations' .
+    - pep8 --ignore E201,E202 --max-line-length=100 --exclude='migrations' .
