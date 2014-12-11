@@ -2,7 +2,6 @@ from django.core.urlresolvers import reverse
 from django.test import Client, TestCase
 
 from users.models import User
-from users.views import UserRedirectView, UserUpdateView
 
 
 class UserRedirectViewTestCase(TestCase):
