@@ -29,8 +29,16 @@ Features
 .. _django-configurations: https://github.com/jezdez/django-configurations
 .. _django-allauth: https://github.com/pennersr/django-allauth
 .. _django-avatar: https://github.com/jezdez/django-avatar/
+.. _django-braces: https://github.com/brack3t/django-braces
+.. _django-extensions: https://github.com/django-extensions/django-extensions
+.. _django-floppyforms: https://github.com/gregmuellegger/django-floppyforms
+.. _django-model-utils: https://github.com/carljm/django-model-utils
+.. _django-reversion: https://github.com/etianen/django-reversion
+.. _django-markdown: https://github.com/klen/django_markdown
 .. _Procfile: https://devcenter.heroku.com/articles/procfile
 .. _SendGrid: https://sendgrid.com/
+
+
 
 
 Constraints
@@ -109,8 +117,8 @@ First make sure to create and activate a virtualenv_, then open a terminal at th
 
 Then, create a PostgreSQL database and add the database configuration using the  ``dj-database-url`` app pattern: ``postgres://db_owner:password@dbserver_ip:port/db_name`` either:
 
-* in the ``config.common.py`` setting file,
-* or in the env variable ``DATABASE_URL``
+* in the ``config.local.py`` setting file,
+* or in the env variable ``DATABASE_URL`` in production.
 
 
 
@@ -120,9 +128,15 @@ You can now run the usual Django ``migrate`` and ``runserver`` command (replace 
 
     $ python yourapp/manage.py runserver
 
-The base app will run but you'll need to carry out a few steps to make the sign-up and login forms work. These are currently detailed in `issue #39`_.
+Though it's better if you run::
 
-.. _issue #39: https://github.com/pydanny/cookiecutter-django/issues/39
+    $ grunt serve
+
+Since this will run the server and minify your Javascript, compile your SCSS and minify your images.
+
+The base app will run but you'll need to create your super user::
+
+    $ python yourapp/manage.py createsuperuser
 
 **Live reloading and Sass CSS compilation**
 
@@ -138,7 +152,7 @@ Now you just need::
 
     $ grunt serve
 
-The base app will now run as it would with the usual ``manage.py runserver`` but with live reloading and Sass compilation enabled.
+The base app will now run as it would with the usual ``manage.py runserver_plus`` but with live reloading and Sass compilation enabled.
 
 To get live reloading to work you'll probably need to install an `appropriate browser extension`_
 
@@ -154,7 +168,7 @@ Scattered throughout the Python and HTML of this project are places marked with 
 Releases
 --------
 
-Want a stable release? You can find them at https://github.com/pydanny/cookiecutter-django/releases
+Want a stable release? You can find them at https://github.com/wldcordeiro/cookiecutter-django/releases
 
 
 Not Exactly What You Want?
