@@ -1,7 +1,13 @@
-Code Contributors
-=================
+Contributors
+============
+Wellington Cordeiro (gh: wldcordeiro / @wldcordeiro)*
 
-Daniel Greenfeld*
+* Possesses commit rights
+
+Contributors to Original
+========================
+
+Daniel Greenfeld
 a7p
 Lukas Klein
 Ben Lopatin
@@ -14,7 +20,7 @@ Lyla Fischer
 Taylor Baldwin
 Chris Curvey (@ccurvey)
 Fábio C. Barrionuevo da Luz (@luzfcb)
-Saurabh Kumar (gh: theskumar / @_theskumar)*
+Saurabh Kumar (gh: theskumar / @_theskumar)
 Ashley Camba
 Yaroslav Halchenko
 Pablo / @oubiga
@@ -32,7 +38,7 @@ Eyad Al Sibai / @eyadsibai
 Chris Franklin
 Benjamin Abel
 
-* Possesses commit rights
+
 
 Special Thanks
 ==============
