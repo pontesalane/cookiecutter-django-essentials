@@ -48,6 +48,7 @@ class Local(Common):
 
     # Django Extensions Configuration
     RUNSERVERPLUS_SERVER_ADDRESS_PORT = '0.0.0.0:8080'
+    SHELL_PLUS = "ipython"
     # end Django Extensions Configuration.
 
     # Your local stuff: Below this line define 3rd party libary settings
