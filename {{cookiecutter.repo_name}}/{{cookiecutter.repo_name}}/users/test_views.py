@@ -39,8 +39,8 @@ class UserUpdateViewTestCase(TestCase):
 
         response = self.client.get(reverse('users:update'), follow=True)
         self.assertEqual(
-            response.context_data['user'], User.objects.get(
-                username='testuser')
+            response.context_data['user'],
+            User.objects.get(username='testuser')
         )
 
     def test_success_url(self):
@@ -52,7 +52,7 @@ class UserUpdateViewTestCase(TestCase):
             follow=True
         )
 
-        self.assertEqual(
-            response.redirect_chain,
-            [('http://testserver/users/testuser/', 302)]
+        self.assertRedirects(
+            response,
+            '/users/testuser/'
         )
