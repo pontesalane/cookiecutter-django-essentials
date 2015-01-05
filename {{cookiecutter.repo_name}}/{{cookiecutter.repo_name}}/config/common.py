@@ -272,6 +272,10 @@ class Common(Configuration):
     }
     # END LOGGING CONFIGURATION
 
+    @classmethod
+    def post_setup(cls):
+        cls.DATABASES['default']['ATOMIC_REQUESTS'] = True
+
     # GRAPPELLI CONFIGURATION
     GRAPPELLI_ADMIN_TITLE = 'Zions FX Admin'
     GRAPPELLI_INDEX_DASHBOARD = (
