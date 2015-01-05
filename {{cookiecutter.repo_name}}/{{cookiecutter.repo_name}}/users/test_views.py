@@ -2,7 +2,6 @@ from django.core.urlresolvers import reverse
 from django.test import Client, TestCase
 
 from users.models import User
-from users.views import UserRedirectView, UserUpdateView
 
 
 class UserRedirectViewTestCase(TestCase):
@@ -40,8 +39,8 @@ class UserUpdateViewTestCase(TestCase):
 
         response = self.client.get(reverse('users:update'), follow=True)
         self.assertEqual(
-            response.context_data['user'], User.objects.get(
-                username='testuser')
+            response.context_data['user'],
+            User.objects.get(username='testuser')
         )
 
     def test_success_url(self):
@@ -53,7 +52,7 @@ class UserUpdateViewTestCase(TestCase):
             follow=True
         )
 
-        self.assertEqual(
-            response.redirect_chain,
-            [('http://testserver/users/testuser/', 302)]
+        self.assertRedirects(
+            response,
+            '/users/testuser/'
         )

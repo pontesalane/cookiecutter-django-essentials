@@ -31,7 +31,10 @@ class Local(Common):
     # django-debug-toolbar
     MIDDLEWARE_CLASSES = Common.MIDDLEWARE_CLASSES + \
         ('debug_toolbar.middleware.DebugToolbarMiddleware',)
-    INSTALLED_APPS += ('debug_toolbar',)
+    INSTALLED_APPS += (
+        'debug_toolbar',
+        'django_extensions',  # Useful helper extensions
+    )
 
     INTERNAL_IPS = ('127.0.0.1', '10.0.2.2')
 
@@ -42,6 +45,11 @@ class Local(Common):
         'SHOW_TEMPLATE_CONTEXT': True,
     }
     # end django-debug-toolbar
+
+    # Django Extensions Configuration
+    RUNSERVERPLUS_SERVER_ADDRESS_PORT = '0.0.0.0:8080'
+    SHELL_PLUS = "ipython"
+    # end Django Extensions Configuration.
 
     # Your local stuff: Below this line define 3rd party libary settings
 

@@ -6,14 +6,23 @@ django-configurations==0.8
 django-secure==1.0.1
 django-cache-url==0.8.0
 dj-database-url==0.3.0
-django-localflavor==1.0
+django-localflavor==1.1
+
+# Admin Customization
+django-grappelli==2.6.3
+django-filebrowser==3.5.7
 
 # Forms
 django-braces==1.4.0
-django-floppyforms==1.2.0
+django-floppyforms==1.3.0
 
 # Models
 django-model-utils==2.2
+
+# Django Extensions and relevant dependency
+django-extensions==1.4.9
+Werkzeug==0.9.6
+ipython==2.3.1
 
 # images
 Pillow==2.7.0
@@ -32,7 +41,7 @@ django-autoslug==1.7.2
 # Useful things
 django-avatar==2.0
 django-reversion==1.8.5
-django-markdown==0.8.1
+django_markdown==0.8.4
 
 # Time zones support
 pytz==2014.10

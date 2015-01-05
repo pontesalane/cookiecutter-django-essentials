@@ -1,0 +1,19 @@
+[run]
+source = '.'
+branch = True
+omit =
+    *migrations*
+    *test*
+    *__init__*
+
+[report]
+omit =
+    */migrations/*
+    *__init__*
+    *test*
+    docs/*
+    setup.py
+    {{ cookiecutter.repo_name }}/config/*
+    {{ cookiecutter.repo_name }}/dashboard.py
+    {{ cookiecutter.repo_name }}/wsgi.py
+    {{ cookiecutter.repo_name }}/manage.py

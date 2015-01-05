@@ -46,7 +46,7 @@ class UserUpdateView(LoginRequiredMixin, UpdateView):
 
     def get_object(self):
         # Only get the User record for the user making the request
-        return User.objects.get(username=self.request.user.username)
+        return self.request.user
 
 
 class UserListView(LoginRequiredMixin, ListView):

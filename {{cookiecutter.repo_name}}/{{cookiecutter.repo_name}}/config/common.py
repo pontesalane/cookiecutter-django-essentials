@@ -33,15 +33,20 @@ class Common(Configuration):
         # Useful template tags:
         # 'django.contrib.humanize',
 
-        # Admin
+        # Admin, Grappelli needs to be loaded before to work.
+        'grappelli.dashboard',
+        'grappelli',
+        'filebrowser',
         'django.contrib.admin',
     )
+
     THIRD_PARTY_APPS = (
         'avatar',  # for user avatars
         'allauth',  # registration
         'allauth.account',  # registration
         'reversion',  # Model Versioning.
         'localflavor',  # Local Flavor adds country specific helpers.
+        'django_markdown',  # add markdown support to the project.
     )
 
     # Apps specific for this project go here.
@@ -266,5 +271,12 @@ class Common(Configuration):
         }
     }
     # END LOGGING CONFIGURATION
+
+    # GRAPPELLI CONFIGURATION
+    GRAPPELLI_ADMIN_TITLE = 'Zions FX Admin'
+    GRAPPELLI_INDEX_DASHBOARD = (
+        'dashboard.CustomIndexDashboard'
+    )
+    # END GRAPPELLI CONFIGURATION
 
     # Your common stuff: Below this line define 3rd party library settings
