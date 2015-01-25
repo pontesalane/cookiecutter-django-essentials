@@ -49,6 +49,6 @@ pytz==2014.10
 # REST Framework
 djangorestframework==3.0.3
 django-rest-auth==0.3.3
-django-filter==0.9.1
+django-filter==0.9.2
 
 # Your custom requirements go here
