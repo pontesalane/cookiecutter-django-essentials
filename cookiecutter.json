@@ -11,6 +11,7 @@
     "version": "0.1.0",
     "now": "2015/01/05",
     "time_zone": "America/Denver",
+    "port": "8080",
     "database_name": "database",
     "database_user": "dbuser",
     "database_password": "password"

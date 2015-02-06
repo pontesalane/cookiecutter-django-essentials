@@ -47,6 +47,9 @@ class Common(Configuration):
         'reversion',  # Model Versioning.
         'localflavor',  # Local Flavor adds country specific helpers.
         'django_markdown',  # add markdown support to the project.
+        'rest_framework',  # Add Django REST Framework to enable REST API creation
+        'rest_framework.authtoken',  # Django REST Token
+        'rest_auth',  # Allauth Django REST Framework support
     )
 
     # Apps specific for this project go here.
@@ -158,7 +161,6 @@ class Common(Configuration):
     TEMPLATE_CONTEXT_PROCESSORS = (
         'django.contrib.auth.context_processors.auth',
         'allauth.account.context_processors.account',
-        'allauth.socialaccount.context_processors.socialaccount',
         'django.core.context_processors.debug',
         'django.core.context_processors.i18n',
         'django.core.context_processors.media',
@@ -234,6 +236,7 @@ class Common(Configuration):
     AUTH_USER_MODEL = 'users.User'
     LOGIN_REDIRECT_URL = 'users:redirect'
     LOGIN_URL = 'account_login'
+    DEFAULT_FROM_EMAIL = '{{cookiecutter.email}}'
     # END Custom user app defaults
 
     # SLUGLIFIER
@@ -277,10 +280,20 @@ class Common(Configuration):
         cls.DATABASES['default']['ATOMIC_REQUESTS'] = True
 
     # GRAPPELLI CONFIGURATION
-    GRAPPELLI_ADMIN_TITLE = 'Zions FX Admin'
+    GRAPPELLI_ADMIN_TITLE = '{{cookiecutter.repo_name|replace("_"," ")|capitalize}} Admin'
     GRAPPELLI_INDEX_DASHBOARD = (
         'dashboard.CustomIndexDashboard'
     )
     # END GRAPPELLI CONFIGURATION
+
+    # REST FRAMEWORK CONFIGURATION
+    REST_FRAMEWORK = {
+        'DEFAULT_PERMISSION_CLASSES': [
+            'rest_framework.permissions.AllowAny',
+            'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+        ],
+        'paginate_by': 10
+    }
+    # END REST FRAMEWORK CONFIGURATION
 
     # Your common stuff: Below this line define 3rd party library settings

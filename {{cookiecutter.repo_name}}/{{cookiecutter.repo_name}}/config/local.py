@@ -47,7 +47,7 @@ class Local(Common):
     # end django-debug-toolbar
 
     # Django Extensions Configuration
-    RUNSERVERPLUS_SERVER_ADDRESS_PORT = '0.0.0.0:8080'
+    RUNSERVERPLUS_SERVER_ADDRESS_PORT = '0.0.0.0:{{cookiecutter.port}}'
     SHELL_PLUS = "ipython"
     # end Django Extensions Configuration.
 
