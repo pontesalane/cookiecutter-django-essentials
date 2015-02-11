@@ -238,6 +238,7 @@ class Common(Configuration):
     AUTH_USER_MODEL = 'users.User'
     LOGIN_REDIRECT_URL = 'users:redirect'
     LOGIN_URL = 'account_login'
+    DEFAULT_FROM_EMAIL = '{{cookiecutter.email}}'
     # END Custom user app defaults
 
     # SLUGLIFIER
@@ -281,7 +282,7 @@ class Common(Configuration):
         cls.DATABASES['default']['ATOMIC_REQUESTS'] = True
 
     # GRAPPELLI CONFIGURATION
-    GRAPPELLI_ADMIN_TITLE = '{{cookiecutter.project_name}}'
+    GRAPPELLI_ADMIN_TITLE = '{{cookiecutter.repo_name|replace("_"," ")|capitalize}} Admin'
     GRAPPELLI_INDEX_DASHBOARD = (
         'dashboard.CustomIndexDashboard'
     )

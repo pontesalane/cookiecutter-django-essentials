@@ -69,6 +69,7 @@ module.exports = function (grunt) {
           assetCacheBuster: false,
           raw: 'Sass::Script::Number.precision = 10\n',
           require: [
+            'compass',
             'bourbon',
             'breakpoint',
           ]

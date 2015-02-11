@@ -18,7 +18,7 @@ class CustomIndexDashboard(Dashboard):
     """
 
     def init_with_context(self, context):
-        site_name = get_admin_site_name(context)
+        site_name = get_admin_site_name(context)  # noqa
 
         # append an app list module for "Applications"
         self.children.append(modules.AppList(

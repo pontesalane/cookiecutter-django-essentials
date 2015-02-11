@@ -24,13 +24,13 @@ Pillow==2.7.0
 
 # Django Extensions and relevant dependency
 django-extensions==1.5.0
-Werkzeug==0.10
+Werkzeug==0.10.1
 ipython==2.4.1
 ptpython==0.5
 
 # For user registration, either via email or social
 # Well-built with regular release cycles!
-django-allauth==0.19.0
+django-allauth==0.19.1
 
 # For the persistance stores
 psycopg2==2.6

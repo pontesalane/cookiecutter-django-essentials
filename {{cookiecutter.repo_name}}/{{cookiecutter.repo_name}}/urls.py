@@ -9,7 +9,6 @@ from django.views.generic import TemplateView
 
 from filebrowser.sites import site
 
-admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$',  # noqa
@@ -27,6 +26,9 @@ urlpatterns = patterns('',
     url(r'^grappelli/', include('grappelli.urls')),  # Grappelli URLS
     url(r'^admin/', include(admin.site.urls)),  # Admin URLS
 
+    # REST Framework URLs
+    url(r'^api-auth/',
+        include('rest_framework.urls', namespace='rest_framework')),
 
     # User management
     url(r'^users/', include("users.urls", namespace="users")),
