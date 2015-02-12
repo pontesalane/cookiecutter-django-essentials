@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from users.forms import ZionsUserCreationForm
+from users.forms import {{cookiecutter.project_camel_name}}UserCreationForm
 from users.models import User
 
 
