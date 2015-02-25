@@ -1,5 +1,6 @@
+******************************
 cookiecutter-django-essentials
-==============================
+******************************
 
 .. image:: https://requires.io/github/wldcordeiro/cookiecutter-django-essentials/requirements.svg?branch=master
      :target: https://requires.io/github/wldcordeiro/cookiecutter-django-essentials/requirements/?branch=master
@@ -14,11 +15,13 @@ A cookiecutter_ template for Django.
 .. _cookiecutter: https://github.com/audreyr/cookiecutter
 
 Features
----------
+========
+
 * For Django 1.7
 
+
 Management Features
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 * Settings management via django-configurations_
 * Database configuration via dj-database-url_
@@ -33,7 +36,7 @@ Management Features
 .. _django-grappelli: https://github.com/sehmaschine/django-grappelli
 
 Utility Features
-^^^^^^^^^^^^^^^^
+----------------
 
 * Useful mixins via django-braces_
 * Better forms via django-floppyforms_
@@ -48,7 +51,7 @@ Utility Features
 .. _django-markdown: https://github.com/klen/django_markdown
 
 Development Features
-^^^^^^^^^^^^^^^^^^^^
+--------------------
 
 * Improved shell experience via ipython_
 * Further improved shell experience via ptpython_
@@ -66,7 +69,7 @@ Development Features
 .. _flake8: https://pypi.python.org/pypi/flake8
 
 User Management Features
-^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------
 
 * Registration via django-allauth_
 * User avatars via django-avatar_
@@ -75,7 +78,7 @@ User Management Features
 .. _django-avatar: https://github.com/jezdez/django-avatar/
 
 REST Features
-^^^^^^^^^^^^^
+-------------
 
 * REST API Creation support via django-rest-framework_
 * REST powered authentication and registration via django-rest-auth_
@@ -84,7 +87,7 @@ REST Features
 .. _django-rest-auth: https://github.com/Tivix/django-rest-auth
 
 Production Features
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 * Procfile_ for deploying to Heroku
 * Heroku optimized requirements
@@ -98,7 +101,7 @@ Production Features
 
 
 Constraints
------------
+===========
 
 * Only maintained 3rd party libraries are used.
 * PostgreSQL everywhere
@@ -106,7 +109,7 @@ Constraints
 
 
 Usage
-------
+=====
 
 Let's pretend you want to create a Django project called "redditclone". Rather than using `startproject`
 and then editing the results to include your name, email, and various configuration issues that always get forgotten until the worst possible moment, get cookiecutter_ to do all the work.
@@ -166,7 +169,7 @@ Create a GitHub repo and push it there::
 Now take a look at your repo. Don't forget to carefully look at the generated README. Awesome, right?
 
 Getting up and running
-----------------------
+======================
 
 The steps below will get you up and running with a local development environment. We assume you have the following installed:
 
@@ -226,23 +229,23 @@ To get live reloading to work you'll probably need to install an `appropriate br
 It's time to write the code!!!
 
 "Your Stuff"
--------------
+=============
 
 Scattered throughout the Python and HTML of this project are places marked with "your stuff". This is where third-party libraries are to be integrated with your project.
 
 Releases
---------
+========
 
 Want a stable release? You can find them at https://github.com/wldcordeiro/cookiecutter-django-essentials/releases
 
 
 Not Exactly What You Want?
----------------------------
+===========================
 
 This is what I want. *It might not be what you want.* Don't worry, you have options:
 
 Fork This
-~~~~~~~~~~
+----------
 
 If you have differences in your preferred setup, I encourage you to fork this to create your own version.
 Once you have your fork working, let me know and I'll add it to a '*Similar Cookiecutter Templates*' list here.
@@ -257,7 +260,7 @@ If you do rename your fork, I encourage you to submit it to the following places
 .. _grid: https://www.djangopackages.com/grids/g/cookiecutter/
 
 Or Submit a Pull Request
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 I also accept pull requests on this, if they're small, atomic, and if they make my own project development
 experience better.
