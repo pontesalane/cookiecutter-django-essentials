@@ -26,6 +26,12 @@ Management Features
 * Internationalization support via django-localflavor_
 * Improved Admin experience via django-grappelli_
 
+.. _django-configurations: https://github.com/jezdez/django-configurations
+.. _dj-database-url: https://github.com/kennethreitz/dj-database-url
+.. _django-secure: https://pypi.python.org/pypi/django-secure
+.. _django-localflavor: https://github.com/django/django-localflavor
+.. _django-grappelli: https://github.com/sehmaschine/django-grappelli
+
 Utility Features
 ^^^^^^^^^^^^^^^^
 
@@ -34,6 +40,12 @@ Utility Features
 * Useful model tools via django-model-utils_
 * Model version management via django-reversion_
 * Markdown support via django-markdown_
+
+.. _django-braces: https://github.com/brack3t/django-braces
+.. _django-floppyforms: https://github.com/gregmuellegger/django-floppyforms
+.. _django-model-utils: https://github.com/carljm/django-model-utils
+.. _django-reversion: https://github.com/etianen/django-reversion
+.. _django-markdown: https://github.com/klen/django_markdown
 
 Development Features
 ^^^^^^^^^^^^^^^^^^^^
@@ -46,11 +58,21 @@ Development Features
 * Insure your code is PEP8 compliant with flake8_
 * Grunt build for compass, uglify, imagemin and livereload
 
+.. _ipython: http://ipython.org/
+.. _ptpython: https://github.com/jonathanslenders/ptpython
+.. _django-extensions: https://github.com/django-extensions/django-extensions
+.. _django-debug-toolbar: https://github.com/django-debug-toolbar/django-debug-toolbar/
+.. _coverage: https://pypi.python.org/pypi/coverage/3.7.1
+.. _flake8: https://pypi.python.org/pypi/flake8
+
 User Management Features
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Registration via django-allauth_
 * User avatars via django-avatar_
+
+.. _django-allauth: https://github.com/pennersr/django-allauth
+.. _django-avatar: https://github.com/jezdez/django-avatar/
 
 REST Features
 ^^^^^^^^^^^^^
@@ -58,33 +80,17 @@ REST Features
 * REST API Creation support via django-rest-framework_
 * REST powered authentication and registration via django-rest-auth_
 
+.. _django-rest-framework: https://github.com/tomchristie/django-rest-framework
+.. _django-rest-auth: https://github.com/Tivix/django-rest-auth
+
 Production Features
 ^^^^^^^^^^^^^^^^^^^
+
 * Procfile_ for deploying to Heroku
 * Heroku optimized requirements
 * Basic caching setup
 * Basic e-mail configurations for send emails via SendGrid_
 
-.. _django-configurations: https://github.com/jezdez/django-configurations
-.. _dj-database-url: https://github.com/kennethreitz/dj-database-url
-.. _django-secure: https://pypi.python.org/pypi/django-secure
-.. _django-localflavor: https://github.com/django/django-localflavor
-.. _django-grappelli: https://github.com/sehmaschine/django-grappelli
-.. _django-braces: https://github.com/brack3t/django-braces
-.. _django-floppyforms: https://github.com/gregmuellegger/django-floppyforms
-.. _django-model-utils: https://github.com/carljm/django-model-utils
-.. _django-reversion: https://github.com/etianen/django-reversion
-.. _django-markdown: https://github.com/klen/django_markdown
-.. _ipython: http://ipython.org/
-.. _ptpython: https://github.com/jonathanslenders/ptpython
-.. _django-extensions: https://github.com/django-extensions/django-extensions
-.. _django-debug-toolbar: https://github.com/django-debug-toolbar/django-debug-toolbar/
-.. _coverage: https://pypi.python.org/pypi/coverage/3.7.1
-.. _flake8: https://pypi.python.org/pypi/flake8
-.. _django-allauth: https://github.com/pennersr/django-allauth
-.. _django-avatar: https://github.com/jezdez/django-avatar/
-.. _django-rest-framework: https://github.com/tomchristie/django-rest-framework
-.. _django-rest-auth: https://github.com/Tivix/django-rest-auth
 .. _Procfile: https://devcenter.heroku.com/articles/procfile
 .. _SendGrid: https://sendgrid.com/
 
