@@ -1,5 +1,5 @@
 # Production Django
-django==1.7.4
+django==1.7.5
 
 # Configuration
 django-configurations==0.8
