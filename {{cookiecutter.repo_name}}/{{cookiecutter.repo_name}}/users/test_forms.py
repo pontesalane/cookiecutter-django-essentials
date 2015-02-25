@@ -1,10 +1,10 @@
 from django.test import TestCase
 
-from users.forms import {{cookiecutter.project_camel_name}}UserCreationForm
+from users.forms import UserCreationForm
 from users.models import User
 
 
-class {{cookiecutter.project_camel_name}}UserCreationTestCase(TestCase):
+class UserCreationTestCase(TestCase):
     def setUp(self):
         self.test_user = User.objects.create(
             username='testuser',
@@ -12,13 +12,13 @@ class {{cookiecutter.project_camel_name}}UserCreationTestCase(TestCase):
             password='password'
         )
 
-        self.bad_form = ZionsUserCreationForm({
+        self.bad_form = UserCreationForm({
             'username': 'testuser',
             'password1': 'password',
             'password2': 'password',
         })
 
-        self.good_form = ZionsUserCreationForm({
+        self.good_form = UserCreationForm({
             'username': 'testuser2',
             'password1': 'password',
             'password2': 'password',

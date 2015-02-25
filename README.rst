@@ -15,26 +15,76 @@ A cookiecutter_ template for Django.
 
 Features
 ---------
-
 * For Django 1.7
+
+Management Features
+^^^^^^^^^^^^^^^^^^^
+
 * Settings management via django-configurations_
+* Database configuration via dj-database-url_
+* Security checking via django-secure_
+* Internationalization support via django-localflavor_
+* Improved Admin experience via django-grappelli_
+
+Utility Features
+^^^^^^^^^^^^^^^^
+
+* Useful mixins via django-braces_
+* Better forms via django-floppyforms_
+* Useful model tools via django-model-utils_
+* Model version management via django-reversion_
+* Markdown support via django-markdown_
+
+Development Features
+^^^^^^^^^^^^^^^^^^^^
+
+* Improved shell experience via ipython_
+* Further improved shell experience via ptpython_
+* Helpers and improved development server via django-extensions_
+* Debug easily with the django-debug-toolbar_
+* Verify your test coverage with coverage_
+* Insure your code is PEP8 compliant with flake8_
+* Grunt build for compass, uglify, imagemin and livereload
+
+User Management Features
+^^^^^^^^^^^^^^^^^^^^^^^^
+
 * Registration via django-allauth_
 * User avatars via django-avatar_
+
+REST Features
+^^^^^^^^^^^^^
+
+* REST API Creation support via django-rest-framework_
+* REST powered authentication and registration via django-rest-auth_
+
+Production Features
+^^^^^^^^^^^^^^^^^^^
 * Procfile_ for deploying to Heroku
 * Heroku optimized requirements
 * Basic caching setup
-* Grunt build for compass, uglify, imagemin and livereload
 * Basic e-mail configurations for send emails via SendGrid_
 
 .. _django-configurations: https://github.com/jezdez/django-configurations
-.. _django-allauth: https://github.com/pennersr/django-allauth
-.. _django-avatar: https://github.com/jezdez/django-avatar/
+.. _dj-database-url: https://github.com/kennethreitz/dj-database-url
+.. _django-secure: https://pypi.python.org/pypi/django-secure
+.. _django-localflavor: https://github.com/django/django-localflavor
+.. _django-grappelli: https://github.com/sehmaschine/django-grappelli
 .. _django-braces: https://github.com/brack3t/django-braces
-.. _django-extensions: https://github.com/django-extensions/django-extensions
 .. _django-floppyforms: https://github.com/gregmuellegger/django-floppyforms
 .. _django-model-utils: https://github.com/carljm/django-model-utils
 .. _django-reversion: https://github.com/etianen/django-reversion
 .. _django-markdown: https://github.com/klen/django_markdown
+.. _ipython: http://ipython.org/
+.. _ptpython: https://github.com/jonathanslenders/ptpython
+.. _django-extensions: https://github.com/django-extensions/django-extensions
+.. _django-debug-toolbar: https://github.com/django-debug-toolbar/django-debug-toolbar/
+.. _coverage: https://pypi.python.org/pypi/coverage/3.7.1
+.. _flake8: https://pypi.python.org/pypi/flake8
+.. _django-allauth: https://github.com/pennersr/django-allauth
+.. _django-avatar: https://github.com/jezdez/django-avatar/
+.. _django-rest-framework: https://github.com/tomchristie/django-rest-framework
+.. _django-rest-auth: https://github.com/Tivix/django-rest-auth
 .. _Procfile: https://devcenter.heroku.com/articles/procfile
 .. _SendGrid: https://sendgrid.com/
 
@@ -61,7 +111,7 @@ First, get cookiecutter. Trust me, it's awesome::
 
 Now run it against this repo::
 
-    $ cookiecutter https://github.com/wldcordeiro/cookiecutter-django.git
+    $ cookiecutter https://github.com/wldcordeiro/cookiecutter-django-essentials.git
 
 You'll be prompted for some questions, answer them, then it will create a Django project for you.
 
@@ -70,19 +120,28 @@ You'll be prompted for some questions, answer them, then it will create a Django
 
 It prompts you for questions. Answer them::
 
-    Cloning into 'cookiecutter-django'...
+    Cloning into 'cookiecutter-django-essentials'...
     remote: Counting objects: 550, done.
     remote: Compressing objects: 100% (310/310), done.
     remote: Total 550 (delta 283), reused 479 (delta 222)
     Receiving objects: 100% (550/550), 127.66 KiB | 58 KiB/s, done.
     Resolving deltas: 100% (283/283), done.
-    project_name (default is "project_name")? Reddit Clone
+    project_name (default is "project_name is the title of the project")? Reddit Clone
     repo_name (default is "repo_name")? redditclone
+    repo_url (default is "repo_url is the url for your repo, minus '.git'")? http://github.com/foo/redditclone
     author_name (default is "Your Name")? Wellington Cordeiro
+    author_github_username (default is "@yourusername") @wldcordeiro
     email (default is "Your email")? wellington@wellingtoncordeiro.com
     description (default is "A short description of the project.")? A reddit clone.
-    year (default is "Current year")? 2014
-    domain_name (default is "Domain name")?
+    year (default is "Current year")? 2015
+    domain_name (default is "Domain name")? redditclone.org
+    version (default is "0.1.0")? 1.0.0
+    now (default is "2015/01/05")? 2015/01/10
+    time_zone (default is "America/Denver")? America/Denver
+    port (default is "8080")? 8082
+    database_name (default is "database")? testdb
+    database_user (default is "dbuser")? testuser
+    database_password (default is"password")? awesomepassword
 
 
 Enter the project and take a look around::
@@ -168,7 +227,7 @@ Scattered throughout the Python and HTML of this project are places marked with 
 Releases
 --------
 
-Want a stable release? You can find them at https://github.com/wldcordeiro/cookiecutter-django/releases
+Want a stable release? You can find them at https://github.com/wldcordeiro/cookiecutter-django-essentials/releases
 
 
 Not Exactly What You Want?

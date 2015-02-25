@@ -1,5 +1,8 @@
 from django import forms
-from django.contrib.auth.forms import UserChangeForm, UserCreationForm
+from django.contrib.auth.forms import (
+    UserChangeForm as DjangoUserChangeForm,
+    UserCreationForm as DjangoUserCreationForm
+)
 
 from .models import User
 
@@ -14,15 +17,15 @@ class UserForm(forms.ModelForm):
         fields = ("first_name", "last_name")
 
 
-class {{cookiecutter.project_camel_name}}UserChangeForm(UserChangeForm):
+class UserChangeForm(DjangoUserChangeForm):
 
-    class Meta(UserChangeForm.Meta):
+    class Meta(DjangoUserChangeForm.Meta):
         model = User
 
 
-class {{cookiecutter.project_camel_name}}UserCreationForm(UserCreationForm):
+class UserCreationForm(DjangoUserCreationForm):
 
-    class Meta(UserCreationForm.Meta):
+    class Meta(DjangoUserCreationForm.Meta):
         model = User
 
     def clean_username(self):

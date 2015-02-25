@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as AuthUserAdmin
+from django.utils.translation import ugettext_lazy as _
 
 import reversion
 
@@ -30,5 +31,5 @@ class UserAdmin(reversion.VersionAdmin, AuthUserAdmin):
         ),
         (_('Important dates'), {'fields': ('last_login', 'date_joined')}),
     )
-    form = forms.{{cookiecutter.project_camel_name}}UserChangeForm
-    add_form = forms.{{cookiecutter.project_camel_name}}UserCreationForm
+    form = forms.UserChangeForm
+    add_form = forms.UserCreationForm

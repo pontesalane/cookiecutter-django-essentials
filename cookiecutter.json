@@ -2,7 +2,6 @@
     "project_name": "project_name is the title of the project.",
     "repo_name":"repo_name is used for describing the directory structure.",
     "repo_url": "repo_url is the url for your repo, minus '.git'",
-    "project_camel_name": "CamelCase version of your project name to use for class names.",
     "author_name": "Your Name",
     "author_github_username": "@yourusername",
     "email": "Your email",
