@@ -1,5 +1,5 @@
 from django.core.urlresolvers import reverse
-from django.test import Client, TestCase
+from django.test import TestCase
 
 from users.models import User
 
@@ -7,7 +7,6 @@ from users.models import User
 class UserRedirectViewTestCase(TestCase):
 
     def setUp(self):
-        self.client = Client()
         User.objects.create_user(
             username="testuser",
             email="test@example.com",
@@ -27,7 +26,6 @@ class UserRedirectViewTestCase(TestCase):
 class UserUpdateViewTestCase(TestCase):
 
     def setUp(self):
-        self.client = Client()
         User.objects.create_user(
             username="testuser",
             email="test@example.com",
