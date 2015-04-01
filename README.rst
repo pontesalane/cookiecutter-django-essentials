@@ -17,7 +17,7 @@ A cookiecutter_ template for Django.
 Features
 ========
 
-* For Django 1.7
+* For Django 1.8
 
 
 Management Features
