@@ -1,5 +1,6 @@
 # Production Django
-django==1.8.0
+# django==1.8.0
+django==1.7.7
 
 # Configuration
 django-configurations==0.8
@@ -13,8 +14,8 @@ django-grappelli==2.6.4
 django-filebrowser==3.5.7
 
 # Forms
-django-braces==1.4.0
-django-floppyforms==1.3.0
+django-braces==1.8.0
+django-floppyforms==1.4.0
 
 # Models
 django-model-utils==2.2
