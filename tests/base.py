@@ -18,14 +18,21 @@ class DjangoCookieTestCase(unittest.TestCase):
         ctx = {
             "project_name": "My Test Project",
             "repo_name": "my_test_project",
+            "repo_url": "https://github.com/test/test",
             "author_name": "Test Author",
+            "author_github_username": "@yourusername",
             "email": "test@example.com",
             "description": "A short description of the project.",
             "domain_name": "example.com",
             "version": "0.1.0",
             "timezone": "UTC",
             "now": "2015/01/13",
-            "year": "2015"
+            "year": "2015",
+            "port": "8080",
+            "database_name": "database",
+            "database_user": "dbuser",
+            "database_password": "password",
+            "use_whitenoise": "y"
         }
         if extra_context:
             assert isinstance(extra_context, dict)
