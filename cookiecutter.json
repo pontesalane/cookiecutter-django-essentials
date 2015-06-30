@@ -15,5 +15,5 @@
     "database_name": "database",
     "database_user": "dbuser",
     "database_password": "password",
-    "use_whitenoise": "y",
+    "use_whitenoise": "y"
 }
