@@ -23,13 +23,14 @@ Features
 Management Features
 -------------------
 
-* Settings management via django-configurations_
+* 12-Factor_ based settings via django-environ_
 * Database configuration via dj-database-url_
 * Security checking via django-secure_
 * Internationalization support via django-localflavor_
 * Improved Admin experience via django-grappelli_
 
-.. _django-configurations: https://github.com/jezdez/django-configurations
+.. _django-environ: https://github.com/joke2k/django-environ
+.. _12-Factor: http://12factor.net/
 .. _dj-database-url: https://github.com/kennethreitz/dj-database-url
 .. _django-secure: https://pypi.python.org/pypi/django-secure
 .. _django-localflavor: https://github.com/django/django-localflavor
@@ -89,13 +90,15 @@ REST Features
 Production Features
 -------------------
 
-* Procfile_ for deploying to Heroku
-* Heroku optimized requirements
 * Basic caching setup
+* Optimized development and production settings
+* Procfile_ for deploying to Heroku
 * Basic e-mail configurations for send emails via SendGrid_
+* Serve static files from Amazon S3 or Whitenoise_ (optional)
 
 .. _Procfile: https://devcenter.heroku.com/articles/procfile
 .. _SendGrid: https://sendgrid.com/
+.. _Whitenoise: https://whitenoise.readthedocs.org/
 
 
 
@@ -104,7 +107,7 @@ Constraints
 ===========
 
 * Only maintained 3rd party libraries are used.
-* PostgreSQL everywhere
+* PostgreSQL everywhere (9.0+)
 * Environment variables for configuration (This won't work with Apache/mod_wsgi).
 
 
@@ -151,6 +154,7 @@ It prompts you for questions. Answer them::
     database_name (default is "database")? testdb
     database_user (default is "dbuser")? testuser
     database_password (default is"password")? awesomepassword
+    use_whitenoise (default is "y")?
 
 
 Enter the project and take a look around::
@@ -185,14 +189,15 @@ First make sure to create and activate a virtualenv_, then open a terminal at th
 
 Then, create a PostgreSQL database and add the database configuration using the  ``dj-database-url`` app pattern: ``postgres://db_owner:password@dbserver_ip:port/db_name`` either:
 
-* in the ``config.local.py`` setting file,
-* or in the env variable ``DATABASE_URL`` in production.
+* in the ``config.settings.common.py`` setting file,
+* or in the environment variable ``DATABASE_URL``
 
 
+You can now run the usual Django ``migrate`` and ``runserver`` command::
 
-You can now run the usual Django ``migrate`` and ``runserver`` command (replace ``yourapp`` with the name of the directory containing the Django project)::
+    $ python manage.py migrate
 
-    $ python yourapp/manage.py migrate
+    $ python manage.py runserver
 
     $ python yourapp/manage.py runserver
 
@@ -228,6 +233,11 @@ To get live reloading to work you'll probably need to install an `appropriate br
 
 It's time to write the code!!!
 
+For Readers of Two Scoops of Django 1.8
+--------------------------------------------
+
+You may notice that some elements of this project do not exactly match what we describe in chapter 3. The reason for that is this project, amongst other things, serves as a test bed for trying out new ideas and concepts. Sometimes they work, sometimes they don't, but the end result is that it won't necessarily match precisely what is described in the book I co-authored.
+
 "Your Stuff"
 =============
 
@@ -257,7 +267,7 @@ If you do rename your fork, I encourage you to submit it to the following places
 * The cookiecutter grid_ on Django Packages.
 
 .. _cookiecutter: https://github.com/audreyr/cookiecutter
-.. _grid: https://www.djangopackages.com/grids/g/cookiecutter/
+.. _grid: https://www.djangopackages.com/grids/g/cookiecutters/
 
 Or Submit a Pull Request
 -------------------------

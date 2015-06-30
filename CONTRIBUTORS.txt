@@ -19,8 +19,8 @@ Tom Offermann
 Lyla Fischer
 Taylor Baldwin
 Chris Curvey (@ccurvey)
-Fábio C. Barrionuevo da Luz (@luzfcb)
-Saurabh Kumar (gh: theskumar / @_theskumar)
+Fábio C. Barrionuevo da Luz (@luzfcb)*
+Saurabh Kumar (gh: theskumar / @_theskumar)*
 Ashley Camba
 Yaroslav Halchenko
 Pablo / @oubiga
@@ -37,6 +37,21 @@ Alberto Sanchez / @alb3rto
 Eyad Al Sibai / @eyadsibai
 Chris Franklin
 Benjamin Abel
+Felipe Arruda / @arruda
+Matt Warren / @mfwarren
+Martin Blech
+Andy Rose
+Andrew Mikhnevich / @zcho
+Kevin Ndung'u / @kevgathuku
+Kaveh / @ka7eh
+Alex Tsai / @caffodian
+Garry Cairns / @garry-cairns
+Lin Xianyi / @iynaix
+Adam Dobrawy / @ad-m
+Daniele Tricoli / @eriol
+Harry Percival / @hjwp
+Cullen Rhodes / @c-rhodes
+Audrey Roy Greenfeld / @audreyr (and creator/maintainer of cookiecutter) *
 
 
 
@@ -45,7 +60,6 @@ Special Thanks
 
 The following haven't provided code directly, but have provided guidance and advice.
 
-Audrey Roy (cookiecutter)
 Jannis Leidel (django-configurations)
 Nate Aune
 Barry Morrison
