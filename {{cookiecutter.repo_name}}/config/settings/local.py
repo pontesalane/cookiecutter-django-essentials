@@ -75,8 +75,8 @@ DATABASES = {
     'default': env.db(
         "DATABASE_URL",
         default=('postgres://{{cookiecutter.database_user}}:'
-             '{{cookiecutter.database_password}}@'
-             'localhost:5432/{{cookiecutter.database_name}}'))
+                '{{cookiecutter.database_password}}@'
+                'localhost:5432/{{cookiecutter.database_name}}'))
 }
 # END DATABASE CONFIGURATION
 # Your local stuff: Below this line define 3rd party library settings
