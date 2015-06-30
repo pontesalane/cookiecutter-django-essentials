@@ -1,10 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import os
-import sys
-
-
 try:
     from setuptools import setup
 except ImportError:
@@ -23,7 +19,7 @@ setup(
     ],
     include_package_data=True,
     install_requires=[
-        'Django>=1.7.4',
+        'Django>=1.8.2',
     ],
     zip_safe=False,
     scripts=['{{ cookiecutter.repo_name }}/manage.py'],
