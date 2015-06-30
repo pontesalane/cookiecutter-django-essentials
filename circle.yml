@@ -8,5 +8,5 @@ dependencies:
 
 test:
   override:
-    - pep8 --ignore E201,E202,E225,E228 --max-line-length=100 --exclude='migrations' .
+    - pep8 --ignore E201,E202,E225,E228,E128 --max-line-length=100 --exclude='migrations' .
     - py.test
