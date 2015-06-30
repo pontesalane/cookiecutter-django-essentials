@@ -1,5 +1,4 @@
 {% raw %}{% extends "layouts/base.html" %}
-{% load avatar_tags %}
 {% load static %}
 
 {% block title %}User: {{ object.username }}{% endblock %}
@@ -10,7 +9,6 @@
 {% if object == request.user %}
   <a href="{% url 'users:update' %}">My Info</a>
   <a href="{% url 'account_email' %}">E-Mail</a>
-  <a href="{% url 'avatar_change' %}">Avatar</a>
 {% endif %}
 
 

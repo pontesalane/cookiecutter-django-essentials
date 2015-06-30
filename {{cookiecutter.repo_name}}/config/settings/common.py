@@ -269,7 +269,7 @@ LOGGING = {
 # GRAPPELLI CONFIGURATION
 GRAPPELLI_ADMIN_TITLE = '{{cookiecutter.repo_name|replace("_"," ")|capitalize}} Admin'
 GRAPPELLI_INDEX_DASHBOARD = (
-    'dashboard.CustomIndexDashboard'
+    '{{cookiecutter.repo_name}}.dashboard.CustomIndexDashboard'
 )
 GRAPPELLI_SWITCH_USER = True
 # END GRAPPELLI CONFIGURATION

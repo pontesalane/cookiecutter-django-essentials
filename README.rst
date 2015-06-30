@@ -73,10 +73,8 @@ User Management Features
 ------------------------
 
 * Registration via django-allauth_
-* User avatars via django-avatar_
 
 .. _django-allauth: https://github.com/pennersr/django-allauth
-.. _django-avatar: https://github.com/jezdez/django-avatar/
 
 REST Features
 -------------
