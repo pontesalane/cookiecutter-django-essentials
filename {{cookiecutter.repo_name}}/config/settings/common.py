@@ -38,7 +38,6 @@ DJANGO_APPS = (
     'django.contrib.admin',
 )
 THIRD_PARTY_APPS = (
-    'avatar',  # for user avatars
     'allauth',  # registration
     'allauth.account',  # registration
     'rest_auth.registration',  # REST registration
