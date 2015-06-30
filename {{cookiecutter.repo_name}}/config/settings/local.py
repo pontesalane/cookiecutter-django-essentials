@@ -65,12 +65,6 @@ TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
 # DATABASE CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
-DATABASES = values.DatabaseURLValue(
-    ('postgres://{{cookiecutter.database_user}}:'
-     '{{cookiecutter.database_password}}@'
-     'localhost:5432/{{cookiecutter.database_name}}'
-     )
-)
 DATABASES = {
     'default': env.db(
         "DATABASE_URL",
