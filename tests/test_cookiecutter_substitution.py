@@ -18,7 +18,7 @@ class TestCookiecutterSubstitution(DjangoCookieTestCase):
 
         # Assert that no match is found in any of the files
         for path in paths:
-            for line in open(path, 'r'):
+            for line in open(path, 'r', encoding='utf-8', errors='ignore'):
                 match = re_obj.search(line)
                 self.assertIsNone(
                     match,
