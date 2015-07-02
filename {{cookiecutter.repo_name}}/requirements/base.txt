@@ -23,7 +23,7 @@ django-floppyforms==1.4.1
 django-model-utils==2.2
 
 # Images
-Pillow==2.8.2
+Pillow==2.9.0
 
 # Django Extensions and relevant dependency
 django-extensions==1.5.5
