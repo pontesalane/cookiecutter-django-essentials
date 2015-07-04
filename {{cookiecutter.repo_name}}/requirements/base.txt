@@ -33,7 +33,7 @@ ptpython==0.16
 
 # For user registration, either via email or social
 # Well-built with regular release cycles!
-django-allauth==0.20.0
+django-allauth==0.21.0
 
 # For the persistance stores
 psycopg2==2.6.1
