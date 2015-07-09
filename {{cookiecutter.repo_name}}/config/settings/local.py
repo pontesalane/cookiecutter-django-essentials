@@ -57,7 +57,7 @@ DEBUG_TOOLBAR_CONFIG = {
 # django-extensions
 # ------------------------------------------------------------------------------
 RUNSERVERPLUS_SERVER_ADDRESS_PORT = '0.0.0.0:{{cookiecutter.port}}'
-SHELL_PLUS = "ipython"
+SHELL_PLUS = "ptipython"
 
 # TESTING
 # ------------------------------------------------------------------------------
