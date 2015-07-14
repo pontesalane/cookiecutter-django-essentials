@@ -25,7 +25,7 @@ module.exports = function (grunt) {
       images_otim: this.app + '/static/img',
       js: this.app + '/../static_src/js',
       js_min: this.app + '/static/js',
-      manageScript: this.app + '/manage.py'
+      manageScript: this.app + '/../manage.py'
     };
   };
 
